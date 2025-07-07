@@ -6,7 +6,7 @@ from midiutil import MIDIFile
 midi = MIDIFile(1) # 依然使用1个轨道，但会用不同的通道
 track = 0
 time = 0    # 以拍为单位的起始时间
-tempo = 110 # BPM (每分钟110拍)
+tempo = 108 # BPM (每分钟110拍)
 volume = 100 # 音量 (0-127)
 
 # 为左右手定义不同的通道
@@ -64,8 +64,8 @@ midi.addNote(track, channel_left_hand, pitch_c4, time, duration_half_note, volum
 # time += duration_half_note # 最后一个音符，不需要再推进时间
 
 # 将MIDI文件写入到磁盘
-with open("grandpas_clock_4_measures_hands.mid", "wb") as output_file:
+with open("out/grandpas_clock_4_v2.mid", "wb") as output_file:
     midi.writeFile(output_file)
 
-print("MIDI文件 'grandpas_clock_4_measures_hands.mid' 已成功生成！")
+print("MIDI文件 'grandpas_clock_4_v2' 已成功生成！")
 print("它包含四个小节，后两个小节重复前两个，并区分了左右手通道。")
