@@ -20,7 +20,7 @@
     }
     \new Staff = "left" \with {
       instrumentName = "Left Hand"
-    } \relative c {
+    } \relative c' {
       \clef "bass"
       \time 4/4
       s2 s2 |
